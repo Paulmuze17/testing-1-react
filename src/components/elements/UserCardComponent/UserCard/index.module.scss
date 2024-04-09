@@ -1,0 +1,50 @@
+.user-card {
+	padding: 24px;
+	min-height: 314px;
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+	border-radius: 16px;
+	cursor: pointer;
+	transition: background-color .3s ease-in-out;
+
+	&:hover {
+		background-color: var(--color-light);
+		outline: 1px solid var(--color-primary);
+	}
+	&__name {
+		margin-bottom: 24px;
+	}
+}
+
+.user-card-info {
+	position: relative;
+	padding-left: 38px;
+	
+	&:not(:last-child) {
+		margin-bottom: 12px;
+	}
+}
+
+.user-card-info__icon::before,
+.user-card-info__phone::before,
+.user-card-info__email::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 24px;
+	height: 24px;
+	background-image: url("/assets/images/icons/phone.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin: auto 0;
+}
+
+.user-card-info__phone::before {
+	background-image: url("/assets/images/icons/phone.svg");
+}
+
+.user-card-info__email::before {
+	background-image: url("/assets/images/icons/mail.svg");
+}
